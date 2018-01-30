@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -12,13 +12,21 @@
         <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин 'Мишка'">
       </a>
       <nav class="main-nav">
-        <label class="main-nav__menu-burger" for="menu-burger">Открыть меню</label>
-        <input type="checkbox" name="menu-burger" id="menu-burger">
+        <input class="main-nav__burger-toggle" type="checkbox" name="menu-burger" id="menu-burger">
+        <label class="main-nav__menu-burger page-header__menu-burger" for="menu-burger">Открыть меню</label>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="/catalog.html">Каталог товаров</a></li>
-          <li class="site-list__item"><a href="/form.html">Вязание на заказ</a></li>
-          <li class="site-list__item site-list__item--icon-search"><a href="#">Поиск по сайту</a></li>
-          <li class="site-list__item site-list__item--icon-cart"><a href="#">Корзина: пока пуста</a></li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="/catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="/form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item site-list__item--icon-search">
+            <a class="site-list__link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item site-list__item--icon-cart">
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
+          </li>
         </ul>
       </nav>
     </header>
