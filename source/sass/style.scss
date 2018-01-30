@@ -1,8 +1,9 @@
+html,
 body {
-  width: 375px;
   margin: 0 auto;
 }
 
 @import "page-header.scss";
 @import "main-nav.scss";
-@import "index-page-heading";
+@import "index-page-heading.scss";
+@import "product-preview.scss"
