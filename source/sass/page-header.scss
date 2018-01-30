@@ -1,0 +1,17 @@
+.page-header {
+  position: relative;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.page-header__menu-burger {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
