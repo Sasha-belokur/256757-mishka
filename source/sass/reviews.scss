@@ -54,6 +54,7 @@
 
 .reviews__prev,
 .reviews__next {
+  position: relative;
   width: 50%;
   height: 50px;
   border: 1px solid #ececec;
@@ -63,4 +64,33 @@
 
 .reviews__next {
   margin-left: -1px;
+}
+
+.reviews__prev::after,
+.reviews__next::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 37px;
+  width: 50px;
+  height: 4px;
+  background-color: #000000;
+}
+
+.reviews__prev::before,
+.reviews__next::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 37px;
+  width: 18px;
+  height: 18px;
+  border-top: 4px solid #000000;
+  border-left: 4px solid #000000;
+  transform: rotate(-45deg);
+}
+
+.reviews__next::before {
+  left: 65px;
+  transform: rotate(135deg);
 }
