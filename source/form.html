@@ -41,7 +41,7 @@
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
       <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset>
+        <fieldset class="form__fieldset">
           <legend class="form__group-title">
             Тип
           </legend>
@@ -54,7 +54,7 @@
             Десткая игрушка
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="form__fieldset">
           <legend class="form__group-title">
             Цвет
           </legend>
@@ -71,7 +71,7 @@
           <input class="form__checkbox" id="orange-color" type="checkbox" name="color" value="orange">
           <label class="form__label" for="orange-color">Оранжевый</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="form__fieldset">
           <legend class="form__group-title">
             ФИО
           </legend>
@@ -82,22 +82,28 @@
           <label class="form__label" for="patronymic">Отчество:</label>
           <input class="form__text-input" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
         </fieldset>
-        <fieldset>
-          <label class="form__group-title" for="tel">Тел</label>
+        <fieldset class="form__fieldset">
+          <legend class="form__group-title">
+            <label class="form__group-title" for="tel">Тел</label>
+          </legend>
           <input class="form__text-input form__text-input--icon-tel" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
         </fieldset>
-        <fieldset>
-          <label class="form__group-title" for="email">e-mail</label>
+        <fieldset class="form__fieldset">
+          <legend class="form__group-title">
+            <label class="form__group-title" for="email">e-mail</label>
+          </legend>
           <input class="form__text-input form__text-input--icon-email" id="email" type="tel" name="email" placeholder="Ваш Email*" required>
         </fieldset>
-        <fieldset>
-          <label class="form__group-title" for="extra-info">Доп</label>
+        <fieldset class="form__fieldset">
+          <legend class="form__group-title">
+            <label class="form__group-title" for="extra-info">Доп</label>
+          </legend>
           <textarea class="form__textarea" id="extra-info" name="info" cols="30" rows="10" placeholder="Опишите все ваши пожелания по заказу"></textarea>
         </fieldset>
-        <small class="order-section__reminder">
+        <small class="form__reminder">
           *Поля обязательны для заполнения
         </small>
-        <button class="order-section__button btn" type="submit">Отправить заказ</button>
+        <button class="form__button btn" type="submit">Отправить заказ</button>
       </form>
     </main>
     <footer class="page-footer">

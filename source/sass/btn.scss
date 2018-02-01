@@ -1,6 +1,9 @@
 .btn {
   display: block;
-  padding: 14px; //какой поставить горизонтальный паддинг?
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+//какой поставить горизонтальный паддинг?
   font-size: 17px;
   line-height: 20px;
   font-family: 'Open Sans', sans-serif;
@@ -10,4 +13,5 @@
   text-decoration: none;
   text-transform: uppercase;
   border: 2px solid #444444;
+  background-color: transparent;
 }

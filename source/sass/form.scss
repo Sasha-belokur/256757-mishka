@@ -1,0 +1,19 @@
+.form {
+  padding-bottom: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.form__fieldset {
+  border: none;
+  border-top: 1px solid #62d1ba;
+}
+
+.form__group-title {
+  font-size: 17px;
+  line-height: 17px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #62d1ba;
+  text-transform: uppercase;
+}
