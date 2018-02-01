@@ -45,7 +45,7 @@
           <legend class="form__group-title">
             Тип
           </legend>
-          <input class="form__radio-button" id="accessory" type="radio" name="type" value="accessory">
+          <input class="form__radio-button" id="accessory" type="radio" name="type" value="accessory" checked>
           <label class="form__label" for="accessory">
             Акссесуар для интерьера
           </label>
@@ -75,28 +75,29 @@
           <legend class="form__group-title">
             ФИО
           </legend>
-          <label class="form__label" for="name">Имя:</label>
+          <!-- Как можно добавить маргин без дополнительного класса -->
+          <label class="form__label text__label--margin-top" for="name">Имя:</label>
           <input class="form__text-input" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
-          <label class="form__label" for="surname">Фамилия:</label>
+          <label class="form__label text__label--margin-top" for="surname">Фамилия:</label>
           <input class="form__text-input" id="surname" type="text" name="surname" placeholder="Введите вашу фамилию*" required>
-          <label class="form__label" for="patronymic">Отчество:</label>
+          <label class="form__label text__label--margin-top" for="patronymic">Отчество:</label>
           <input class="form__text-input" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__group-title">
-            <label class="form__group-title" for="tel">Тел</label>
+            <label for="tel">Тел</label>
           </legend>
           <input class="form__text-input form__text-input--icon-tel" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__group-title">
-            <label class="form__group-title" for="email">e-mail</label>
+            <label for="email">e-mail</label>
           </legend>
           <input class="form__text-input form__text-input--icon-email" id="email" type="tel" name="email" placeholder="Ваш Email*" required>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__group-title">
-            <label class="form__group-title" for="extra-info">Доп</label>
+            <label for="extra-info">Доп</label>
           </legend>
           <textarea class="form__textarea" id="extra-info" name="info" cols="30" rows="10" placeholder="Опишите все ваши пожелания по заказу"></textarea>
         </fieldset>
