@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -10,51 +13,55 @@
         <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин 'Мишка'">
       </a>
       <nav class="main-nav">
-        <label class="main-nav__menu-burger" for="menu-handler"></label>
-        <input type="checkbox" name="menu-burger" id="menu-burger">
+        <input class="main-nav__burger-toggle" type="checkbox" name="menu-burger" id="menu-burger">
+        <label class="main-nav__menu-burger page-header__menu-burger" for="menu-burger">Открыть меню</label>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="/catalog.html">Каталог товаров</a></li>
-          <li class="site-list__item"><a href="/form.html">Вязание на заказ</a></li>
-          <li class="site-list__item site-list__item--icon-search"><a href="#">Поиск по сайту</a></li>
-          <li class="site-list__item site-list__item--icon-cart"><a href="#">Корзина: пока пуста</a></li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="/catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="/form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item site-list__item--icon-search">
+            <a class="site-list__link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item site-list__item--icon-cart">
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <section class="index-page-heading">
         <h1 class="index-page-heading__title">
-          Милые штучки ручной работы для дома
+          Милые штучки ручной работы&nbsp;для&nbsp;дома
         </h1>
-        <ul class="index-page-heading__products">
-          <li class="index-page-heading__product-item">
-            <a href="#" class="index-page-heading__product-link index-page-heading__product-link--icon-lamp">Предметы интерьера</a>
-          </li>
-          <li class="index-page-heading__product-item">
-            <a href="#" class="index-page-heading__product-link index-page-heading__product-link--icon-block">Детские игрушки</a>
-          </li>
-        </ul>
+        <div class="index-page-heading__products">
+          <a href="#" class="index-page-heading__product-link index-page-heading__product-link--icon-lamp">Предметы интерьера</a>
+          <a href="#" class="index-page-heading__product-link index-page-heading__product-link--icon-block">Детские игрушки</a>
+        </div>
       </section>
       <article class="product-preview">
         <h2 class="product-preview__title">
-          Вязанные корзинки
+          Вязаные корзинки
         </h2>
         <h3 class="product-preview__reason">
           Товар недели
         </h3>
         <p class="product-preview__desc">
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+          Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках, и трех размерах.
         </p>
         <table class="product-preview__properties">
           <tr>
-            <td>Цвет:</td>
+            <th>Цвет:</td>
             <td>«Тиффани»/серый</td>
           </tr>
           <tr>
-            <td>Диаметр:</td>
+            <th>Диаметр:</td>
             <td>25 см</td>
           </tr>
           <tr>
-            <td>Высота:</td>
+            <th>Высота:</td>
             <td>15 см</td>
           </tr>
         </table>
@@ -89,22 +96,30 @@
               <a class="reviews__author-inst" href="#">@misssssiskras</a>
             </blockquote>
           </div>
-          <div class="reviews_buttons slider__buttons">
+          <div class="reviews__buttons slider__buttons">
             <button class="reviews__prev" type="button" type="button">Предыдущий отзыв</button>
             <button class="reviews__next" type="button" type="button">Следующий отзыв</button>
           </div>
-          <a class="btn reviews__btn" href="#" ></a>
+          <a class="btn reviews__btn" href="#" >Заказать</a>
         </div>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <table class="contacts__info contacts-table">
           <tr class="contacts-table__row">
-            <th class="contacts-table__cell">e-mail:</th>
-            <td class="contacts-table__cell">info@mimimishkashop.ru</td>
+            <th class="contacts-table__cell">
+              e-mail:
+            </th>
+            <td class="contacts-table__cell">
+              <a class="contacts__email" href="mailto:info@mimimishkashop.ru">
+                info@mimimishkashop.ru
+              </a>
+            </td>
           </tr>
           <tr class="contacts-table__row">
-            <th class="contacts-table__cell">адрес:</th>
+            <th class="contacts-table__cell">
+              адрес:
+            </th>
             <td class="contacts-table__cell">
               г. Санкт-Петербург,
               ул. Большая Конюшенная,
@@ -113,16 +128,22 @@
           </tr>
         </table>
         <div class="contacts__map-wrapper">
-          <img class="contacts__map-image" src="http://placehold.it/320x455" width="320" height="455" alt="Карта проезда к магазину Мишка">
+          <img class="contacts__map-image" src="http://placehold.it/320x455" width="260" height="455" alt="Карта проезда к магазину Мишка">
         </div>
         <a href="#" class="btn contacts__write-us">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <ul class="page-footer__social-list">
-        <li class="page-footer__social-list page-footer__social-list--icon-inst"><a href="#">Инстаграмм</a></li>
-        <li class="page-footer__social-list page-footer__social-list--icon-fb"><a href="#">Фейсбук</a></li>
-        <li class="page-footer__social-list page-footer__social-list--icon-tw"><a href="#">Твиттер</a></li>
+        <li class="page-footer__social-item page-footer__social-item--icon-inst">
+          <a href="#">Инстаграмм</a>
+        </li>
+        <li class="page-footer__social-item page-footer__social-item--icon-fb">
+          <a href="#">Фейсбук</a>
+        </li>
+        <li class="page-footer__social-item page-footer__social-item--icon-tw">
+          <a href="#">Твиттер</a>
+          </li>
       </ul>
       <p class="page-footer__copyright">
         Разработано <a href="#" class="page-footer__copyright-link page-footer__copyright-link--icon-academy">HTML Academy</a>

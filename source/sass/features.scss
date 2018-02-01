@@ -1,0 +1,33 @@
+.features {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #000000;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  min-height: 40px;
+  margin-top: 25px;
+  padding-top: 60px;
+  color: #000000;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}

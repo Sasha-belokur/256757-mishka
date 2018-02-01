@@ -1,0 +1,37 @@
+.preview-video {
+  padding-bottom: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.preview-video__title {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 90px;
+  font-size: 17px;
+  line-height: 24px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #000000;
+  border: 1px solid #ececec;
+  border-bottom-width: 0;
+}
+
+.preview-video__bottom-wrapper {
+  padding-top: 30px;
+  padding-bottom: 32px;
+  padding-left: 33px;
+  padding-right: 33px;
+  border: 1px solid #ececec;
+  border-top-width: 0;
+}
+
+.preview-video__desc {
+  margin-bottom: 25px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #444444;
+}
