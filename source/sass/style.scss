@@ -1,8 +1,52 @@
-html,
-body {
-  margin: 0 auto;
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensans.woff2"), url("../fonts/opensans.woff");
 }
 
+@font-face {
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensansbold.woff2"), url("../fonts/opensansbold.woff");
+}
+
+@import "variables.scss";
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $text-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import "mixins.scss";
 @import "page-header.scss";
 @import "main-nav.scss";
 @import "index-page-heading.scss";
@@ -16,5 +60,5 @@ body {
 @import "products.scss";
 @import "product-card.scss";
 @import "preview-video.scss";
-@import "page-intro";
-@import "form";
+@import "page-intro.scss";
+@import "form.scss";
