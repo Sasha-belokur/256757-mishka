@@ -48,9 +48,8 @@
   .main-nav {
     display: flex;
     flex-wrap: wrap;
-    width: 668px;
-    margin: 0 auto;
-    padding: 0 50px;
+
+    @include tablet-container;
   }
 
   .main-nav__logo-wrapper {
@@ -103,9 +102,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    width: 1050px;
-    margin: 0 auto;
-    padding: 0 100px;
+    @include desktop-container;
   }
 
   .main-nav__logo-wrapper {

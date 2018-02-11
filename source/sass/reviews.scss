@@ -10,10 +10,10 @@
   margin-bottom: 30px;
   font-size: 25px;
   line-height: 30px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   color: #000000;
 }
+
 .reviews__item {
   margin: 0;
   margin-bottom: 30px;
@@ -24,7 +24,6 @@
   margin-bottom: 25px;
   font-size: 15px;
   line-height: 30px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #444444;
 }
@@ -33,7 +32,6 @@
   font-size: 17px;
   font-style: normal;
   line-height: 30px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   color: #444444;
 }
@@ -41,13 +39,11 @@
 .reviews__author-inst {
   font-size: 17px;
   line-height: 30px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #444444;
   text-decoration: none;
 }
 
-/*как лучше растянуть кнопки?*/
 .reviews__buttons {
   display: flex;
   justify-content: space-between;
