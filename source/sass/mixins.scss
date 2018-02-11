@@ -4,3 +4,21 @@
   font-size: 15px;
   margin-right: 35px;
 }
+
+@mixin mobile-container {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@mixin tablet-container {
+  width: 668px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+@mixin desktop-container {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
