@@ -1,17 +1,16 @@
 .features {
   padding-top: 30px;
-  padding-right: 30px;
   padding-bottom: 25px;
-  padding-left: 30px;
+
+  @include mobile-container;
 }
 
 .features__title {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   color: #000000;
   font-size: 25px;
   line-height: 30px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
 }
 
@@ -22,12 +21,97 @@
 }
 
 .features__item {
+  position: relative;
   min-height: 40px;
-  margin-top: 25px;
+  margin-bottom: 30px;
   padding-top: 60px;
   color: #000000;
   font-size: 17px;
   line-height: 20px;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.features__item--icon-flower::before {
+  background-image: url("../img/icon-feature-flower.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--icon-money::before {
+  background-image: url("../img/icon-feature-money.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--icon-heart::before {
+  background-image: url("../img/icon-feature-heart.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--icon-ball::before {
+  background-image: url("../img/icon-feature-ball.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--icon-rocket::before {
+  background-image: url("../img/icon-feature-rocket.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--icon-gift::before {
+  background-image: url("../img/icon-feature-gift.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 50px;
+
+    @include tablet-container;
+  }
+
+  .features__title {
+    margin-bottom: 45px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 480px;
+  }
+
+  .features__item {
+    width: 295px;
+    margin-bottom: 55px;
+    padding-right: 40px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding-top: 65px;
+
+    @include desktop-container;
+  }
+
+  .features__title {
+    margin-left: 175px;
+  }
+
+  .features__list {
+    margin-left: 175px;
+    align-content: flex-start;
+  }
 }

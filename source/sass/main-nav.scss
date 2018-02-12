@@ -1,3 +1,10 @@
+.main-nav__logo-wrapper {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-nav__list {
   display: flex;
   flex-direction: column;
@@ -6,20 +13,117 @@
   padding: 0;
 }
 
-.main-nav__burger-toggle {
+.main-nav__list--sales-list {
   display: none;
 }
 
-.site-list__link {
+.main-nav__link {
   display: block;
   padding-top: 27px;
   padding-bottom: 27px;
   padding-left: 76px;
   color: #000000;
   font-size: 17px;
-  line-height: 24px;
-  font-family: 'Open Sans', 'sans-serif';
   font-weight: 700;
   text-decoration: none;
   border-top: 1px solid #ececec;
+}
+
+.main-nav__item--search,
+.main-nav__item--cart {
+  position: relative;
+}
+
+.main-nav__item--search svg,
+.main-nav__item--cart svg {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet-container;
+  }
+
+  .main-nav__logo-wrapper {
+    height: 88px;
+    width: 320px;
+    justify-content: flex-start;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+  }
+
+  .main-nav__item--search a {
+    font-size: 0;
+  }
+
+  .main-nav__item a {
+    padding-top: 35px;
+  }
+
+  .main-nav__item--search svg,
+  .main-nav__item--cart svg {
+    top: 35px;
+  }
+
+  .main-nav__item--search {
+    width: 85px;
+    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+  }
+
+  .main-nav__list--site-list {
+    order: 2;
+  }
+
+  .main-nav__list--sales-list {
+    display: none;
+  }
+
+  .main-nav__link {
+    border-top: 0;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .main-nav__list--site-list a {
+    @include bottom-links;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    @include desktop-container;
+  }
+
+  .main-nav__logo-wrapper {
+    justify-content: center;
+  }
+
+  .main-nav__list--site-list {
+    order: -1;
+  }
+
+  .main-nav__list--site-list a {
+    padding-left: 0;
+  }
+
+
+  .main-nav__list--sales-list {
+    display: flex;
+  }
+
+  .main-nav__list--sales-list a {
+    @include bottom-links;
+    margin-right: 60px;
+  }
 }
