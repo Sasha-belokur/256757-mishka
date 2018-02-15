@@ -16,6 +16,13 @@
   z-index: 5;
 }
 
+@media (max-width: $mobile-only) {
+  .page-header {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .page-header {
     height: 87px;
