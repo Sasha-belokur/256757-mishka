@@ -1,21 +1,28 @@
 .page-intro {
+  @include mobile-container;
   margin: 0;
   padding-top: 25px;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
   color: #444444;
-
-  @include mobile-container;
 }
 
 @media (min-width: $tablet-width) {
   .page-intro {
-    @include tablet-container;
+    width: 493px;
+    margin: 0 auto;
+    padding-left: 225px;
+    padding-right: 50px;
     font-size: 17px;
     line-height: 30px;
-    padding-left: 225px;
   }
 }
 
-
+@media (min-width: $tablet-width) {
+  .page-intro {
+    width: 700px;
+    padding-top: 125px;
+    padding-left: 65px;
+  }
+}
