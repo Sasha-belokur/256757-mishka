@@ -9,11 +9,29 @@
   width: 20px;
   height: 20px;
   border: none;
-  background-image: url("../img/icon-menu-close.svg");
+  background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: transparent;
   z-index: 5;
+}
+
+.page-header--menu-opened .page-header__menu-burger {
+  background-image: url("../img/icon-menu-close.svg");
+}
+
+@media (max-width: $mobile-only) {
+  .page-header {
+    width: 320px;
+    margin: 0 auto;
+    height: 80px;
+    overflow: hidden;
+  }
+
+  .page-header--menu-opened {
+    height: auto;
+    overflow: visible;
+  }
 }
 
 @media (min-width: $tablet-width) {

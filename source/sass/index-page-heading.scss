@@ -19,6 +19,9 @@
 }
 
 .index-page-heading__products {
+  width: 320px;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
 }
@@ -67,7 +70,7 @@
   }
 
   .index-page-heading__product-link {
-    flex-grow: 1;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 20px;

@@ -85,17 +85,32 @@
 
   .features__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 480px;
   }
 
   .features__item {
-    width: 295px;
+    width: 294px;
     margin-bottom: 55px;
     padding-right: 40px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .features__item--icon-flower {
+    order: -5;
+  }
+
+  .features__item--icon-ball {
+    order: -4;
+  }
+
+  .features__item--icon-money {
+    order: -3;
+  }
+
+  .features__item--icon-rocket {
+    order: -2;
   }
 }
 
@@ -107,11 +122,17 @@
   }
 
   .features__title {
+    font-size: 53px;
+    line-height: 57px;
     margin-left: 175px;
   }
 
   .features__list {
     margin-left: 175px;
     align-content: flex-start;
+  }
+
+  .features__item {
+    width: 315px;
   }
 }

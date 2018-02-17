@@ -1,10 +1,39 @@
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  background-color: #f1f1f1;
+}
+
 .page-heading__title {
   margin: 0;
-  padding-top: 75px;
-  padding-bottom: 75px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
-  background-color: #f1f1f1;
-  text-align: center;
+  color: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .page-heading {
+    min-height: 215px;
+  }
+
+  .page-heading__title {
+    padding-top: 35px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-heading {
+    min-height: 235px;
+  }
+
+  .page-heading__title {
+    padding-top: 10px;
+    font-size: 50px;
+    line-height: 57px;
+  }
 }
