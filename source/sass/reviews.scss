@@ -97,6 +97,9 @@
   .reviews {
     position: relative;
     padding-top: 80px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
 
     @include tablet-container;
   }
@@ -147,5 +150,21 @@
 
   .reviews__next::before {
     left: 40px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    @include desktop-container;
+    background-position-x: 100px;
+  }
+
+  .reviews__wrapper {
+    padding-left: 175px;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

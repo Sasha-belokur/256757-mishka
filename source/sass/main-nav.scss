@@ -5,6 +5,19 @@
   align-items: center;
 }
 
+.main-nav a[href] {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-nav a[href]:hover {
+  opacity: 0.6;
+}
+
+.main-nav a[href]:active {
+  opacity: 0.3;
+}
+
 .main-nav__list {
   display: flex;
   flex-direction: column;
@@ -118,7 +131,7 @@
   }
 
   .main-nav__logo-wrapper {
-    padding-left: 105px;
+    padding-left: 40px;
     width: 220px;
   }
 

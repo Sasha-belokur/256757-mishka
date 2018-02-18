@@ -14,4 +14,14 @@
   text-transform: uppercase;
   border: 2px solid #444444;
   background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #444444;
+}
+
+.btn:active {
+  color: rgba($color: #ffffff, $alpha: 0.5);
 }

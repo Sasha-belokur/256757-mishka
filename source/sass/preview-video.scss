@@ -1,7 +1,15 @@
 .preview-video {
-  padding-bottom: 60px;
+  width: 260px;
+  margin: 0 auto 60px;
+  transition: box-shadow 0.3s ease;
+}
 
-  @include mobile-container;
+.preview-video:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.preview-video:active {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .preview-video__title {
@@ -45,8 +53,8 @@
   .preview-video {
     display: flex;
     flex-direction: column;
-
-    @include tablet-container;
+    width: 668px;
+    margin: 0 auto;
   }
 
   .preview-video__title {
@@ -74,15 +82,14 @@
 @media (min-width: $desktop-width) {
   .preview-video {
     position: relative;
-    padding-bottom: 105px;
-
-    @include desktop-container;
+    width: 1050px;
+    margin: 0 auto 105px;
   }
 
   .preview-video__image {
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 0;
     width: 682px;
     height: 455px;
   }
