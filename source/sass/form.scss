@@ -27,10 +27,6 @@
   text-transform: uppercase;
 }
 
-.form__group-title--label {
-  padding-top: 20px;
-}
-
 .form__group-title::after {
   content: "";
   position: absolute;
@@ -174,6 +170,16 @@
   border: none;
   border-bottom: 2px solid #000000;
   background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.form__text-input:hover {
+  border-color: #62d1ba;
+}
+
+.form__text-input:focus {
+  outline: none;
+  border-color: #62d1ba;
 }
 
 .text__label--margin-top {
@@ -193,6 +199,16 @@
   font-weight: 400;
   color: #444444;
   border: 2px solid #000000;
+  transition: all 0.3s ease;
+}
+
+.form__textarea:hover {
+  border-color: #62d1ba;
+}
+
+.form__textarea:focus {
+  outline: none;
+  border-color: #62d1ba;
 }
 
 .form__reminder {
@@ -226,6 +242,10 @@
   .form__group-title {
     width: 165px;
     padding-top: 15px;
+  }
+
+  .form__group-title--label {
+    padding-top: 20px;
   }
 
   .form__group-title::after {
