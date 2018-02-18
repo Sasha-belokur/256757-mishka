@@ -28,27 +28,25 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.page-footer__social-item {
+  height: 30px;
+}
+
 .page-footer__social-item a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: 30px;
   height: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: #231f20;
+  transition: all 0.3s ease;
 }
 
-.page-footer__social-item--icon-inst a {
-  background-image: url("../img/icon-insta.svg");
-  background-size: 27px;
+.page-footer__social-item:hover a {
+  color: #62d1ba;
 }
 
-.page-footer__social-item--icon-fb a {
-  background-image: url("../img/icon-fb.svg");
-  background-size: 16px;
-}
-
-.page-footer__social-item--icon-tw a {
-  background-image: url("../img/icon-twitter.svg");
-  background-size: 28px;
+.page-footer__social-item:active a {
+  opacity: 0.3;
 }
 
 .page-footer__copyright {
@@ -66,16 +64,23 @@
   font-weight: 700;
   color: #000000;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .page-footer__icon-academy {
+  color: #000000;
   font-size: 0;
-  width: 30px;
-  height: 35px;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-size: 27px;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 26px;
+  height: 34px;
+  transition: all 0.3s ease;
+}
+
+.page-footer__copyright:active {
+  opacity: 0.3;
+}
+
+.page-footer__copyright:hover .page-footer__icon-academy {
+  color: #62d1ba;
 }
 
 @media (min-width: $tablet-width) {
@@ -89,7 +94,19 @@
 
   .page-footer__logo {
     display: flex;
+    align-items: center;
     width: 180px;
+    color: #000000;
+    transition: all 0.3s ease;
+  }
+
+  .page-footer__logo[href]:hover {
+    color: #62d1ba;
+  }
+
+  .page-footer__logo[href]:active {
+    color: #62d1ba;
+    opacity: 0.3;
   }
 
   .page-footer__social-list {
