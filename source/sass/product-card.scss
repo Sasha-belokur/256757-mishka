@@ -43,6 +43,7 @@
 .product-card__price {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 20px;
@@ -55,12 +56,23 @@
 .product-card__to-cart {
   width: 20px;
   height: 20px;
-  background-image: url("../img/icon-cart.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
   font-size: 0;
+}
+
+.product-card__to-cart svg {
+  fill: #231f20;
   opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.product-card__to-cart:hover svg {
+  opacity: 1;
+  fill: #62d1ba;
+}
+
+.product-card__to-cart:active svg {
+  fill: #62d1ba;
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {

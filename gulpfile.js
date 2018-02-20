@@ -5,8 +5,8 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
+var cssmin = require("gulp-cssmin");
+var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
@@ -37,15 +37,15 @@ gulp.task("copy", function()  {
 
 gulp.task("serve", ["style"], function() {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/**/**/*.{scss,sass,html}", ["copy", "style"]);
+  gulp.watch("build/*.html").on("change", server.reload);
 });
 
 gulp.task("build", ["copy", "style"]);
