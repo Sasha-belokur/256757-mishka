@@ -7,7 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssmin = require("gulp-cssmin");
 var rename = require("gulp-rename");
-var webp = require('gulp-webp');
+var webp = require("gulp-webp");
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
