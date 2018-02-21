@@ -63,9 +63,11 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index: 10;
 
     @include tablet-container;
   }
@@ -91,6 +93,21 @@
   .main-nav__item--search svg,
   .main-nav__item--cart svg {
     top: 35px;
+    fill: #231f20;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+  }
+
+  .main-nav__item--search:hover svg,
+  .main-nav__item--cart:hover svg {
+    opacity: 1;
+    fill: #62d1ba;
+  }
+
+  .main-nav__item--search:active svg,
+  .main-nav__item--cart:active svg {
+    fill: #62d1ba;
+    opacity: 0.3;
   }
 
   .main-nav__item--search {
