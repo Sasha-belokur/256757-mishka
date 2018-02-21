@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.min.css" rel="stylesheet">
-    <link  href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="preload" as="style">
+    <link  href="fonts/opensans.woff2" rel="preload" as="font">
+    <link  href="fonts/opensans.woff" rel="preload" as="font">
+    <link  href="fonts/opensansbold.woff2" rel="preload" as="font">
+    <link  href="fonts/opensansbold.woff" rel="preload" as="font">
     <script>
       document.createElement( "picture" );
     </script>
@@ -129,15 +132,15 @@
             </h2>
             <ul class="form__inputs-wrapper form__inputs-wrapper--contacts">
               <li>
-                <label class="form__label text__label--margin-top" for="name">Имя:</label>
+                <label class="form__label form__label--margin-top" for="name">Имя:</label>
                 <input class="form__text-input" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
               </li>
               <li>
-                <label class="form__label text__label--margin-top" for="surname">Фамилия:</label>
+                <label class="form__label form__label--margin-top" for="surname">Фамилия:</label>
                 <input class="form__text-input" id="surname" type="text" name="surname" placeholder="Введите вашу фамилию*" required>
               </li>
               <li>
-                <label class="form__label text__label--margin-top" for="patronymic">Отчество:</label>
+                <label class="form__label form__label--margin-top" for="patronymic">Отчество:</label>
                 <input class="form__text-input" id="patronymic" type="text" name="patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>

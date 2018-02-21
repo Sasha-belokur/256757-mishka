@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.min.css" rel="stylesheet">
-    <link  href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="preload" as="style">
+    <link  href="fonts/opensans.woff2" rel="preload" as="font">
+    <link  href="fonts/opensans.woff" rel="preload" as="font">
+    <link  href="fonts/opensansbold.woff2" rel="preload" as="font">
+    <link  href="fonts/opensansbold.woff" rel="preload" as="font">
     <script>
       document.createElement( "picture" );
     </script>
@@ -67,13 +70,13 @@
           <a href="#" class="index-page-heading__product-link index-page-heading__product-link--icon-lamp">
             Предметы<br>интерьера
             <svg width="40px" height="65px">
-              <use xlink:href="#icon-lamp"></use>
+              <use xlink:href="img/sprite.svg#icon-lamp"></use>
             </svg>
           </a>
           <a href="#" class="index-page-heading__product-link index-page-heading__product-link--icon-block">
             Детские<br>игрушки
             <svg width="60px" height="60px">
-              <use xlink:href="#icon-block"></use>
+              <use xlink:href="img/sprite.svg#icon-block"></use>
             </svg>
           </a>
         </div>
@@ -108,8 +111,10 @@
         </div>
         <div class="product-preview__image">
           <picture>
-            <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/jpeg" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Иллюстрация к корзинке" width="260" height="315">
           </picture>
         </div>
@@ -117,7 +122,7 @@
           <p class="product-preview__price">
             Цена: 990 руб.
           </p>
-          <a href="form.html" class="btn product-preview__btn">Заказать</a>
+          <a href="#" class="btn product-preview__btn">Заказать</a>
         </div>
       </article>
       <section class="features">
@@ -182,12 +187,14 @@
         <div class="contacts__map-wrapper">
             <iframe class="contacts__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123595!2d30.32089461558447!3d59.93879686904856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1512838717921" width="322" height="457" style="border: 0; display: none"></iframe>
           <picture>
-            <source media="(min-width: 1250px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 1250px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/jpeg" media="(min-width: 1250px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта проезда" width="320" height="455">
           </picture>
         </div>
-        <a href="#" class="btn contacts__write-us">Напишите нам</a>
+        <a href="contact.html" class="btn contacts__write-us">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -234,6 +241,23 @@
         </a>
       </div>
     </footer>
+    <section class="popup">
+      <div class="popup__window">
+        <h2 class="popup__title">Добавить в&nbsp;корзину</h2>
+        <p class="popup__text">Выбирите размер:</p>
+        <div class="popup__size-buttons">
+          <input class="popup__radio-button visually-hidden" id="size-s" type="radio" name="size" value="size-s" checked>
+          <label class="popup__label" for="size-s">s</label>
+          <input class="popup__radio-button visually-hidden" id="size-m" type="radio" name="size" value="size-m">
+          <label class="popup__label" for="size-m">m</label>
+          <input class="popup__radio-button visually-hidden" id="size-l" type="radio" name="size" value="size-l">
+          <label class="popup__label" for="size-l">l</label>
+        </div>
+        <a href="#" class="btn popup__add-button">Добавить</a>
+      </div>
+    </section>
+    <script src="js/popup.js"></script>
+    <script src="js/product-preview.js"></script>
     <script src="js/contacts.js"></script>
     <script src="js/page-header.js"></script>
   </body>

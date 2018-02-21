@@ -7,6 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssmin = require("gulp-cssmin");
 var rename = require("gulp-rename");
+var webp = require('gulp-webp');
 var server = require("browser-sync").create();
 
 gulp.task("style", function() {
@@ -48,4 +49,10 @@ gulp.task("serve", ["style"], function() {
   gulp.watch("build/*.html").on("change", server.reload);
 });
 
-gulp.task("build", ["copy", "style"]);
+gulp.task("img-convert", function () {
+    gulp.src("source/img/*.{jpg,png}")
+        .pipe(webp())
+        .pipe(gulp.dest("build/img"))
+});
+
+gulp.task("build", ["copy", "style", "img-convert"]);

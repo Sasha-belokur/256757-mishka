@@ -1,5 +1,5 @@
 'use strict';
-(function(){
+(function() {
   var googleMap = document.querySelector('.contacts__map-google');
   googleMap.style.display = "";
 })();
