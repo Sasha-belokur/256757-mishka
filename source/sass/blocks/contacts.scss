@@ -51,6 +51,12 @@
   margin-bottom: 40px;
 }
 
+.contacts__map-google {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+}
+
 .contacts__map-image {
   max-width: unset;
   width: 320px;
@@ -60,20 +66,19 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    position: relative;
-
     @include tablet-container;
   }
 
   .contacts__title {
+    position: relative;
     font-size: 43px;
     line-height: 50px;
   }
 
   .contacts__flag {
     position: absolute;
-    top: 45px;
-    right: 50px;
+    top: -20px;
+    right: 0;
     width: 50px;
     height: 80px;
     display: block;
@@ -99,6 +104,7 @@
 @media (min-width: $desktop-width) {
   .contacts {
     @include desktop-container;
+    position: relative;
     padding-top: 150px;
   }
 
@@ -111,8 +117,8 @@
   }
 
   .contacts__flag {
-    left: 165px;
-    top: 155px;
+    left: -110px;
+    top: -15px;
   }
 
   .contacts__info {
@@ -134,6 +140,11 @@
     position: absolute;
     top: 70px;
     right: 0;
+    width: 525px;
+    height: 455px;
+  }
+
+  .contacts__map-google {
     width: 525px;
     height: 455px;
   }
