@@ -1,0 +1,110 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba($color: #ffffff, $alpha: 0.9);
+}
+
+.popup--opened {
+  display: block;
+}
+
+.popup__window {
+  @include mobile-container;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  margin-left: -1px;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  border: 1px solid #ececec;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+}
+
+.popup__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.popup__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.popup__size-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.popup__radio-button + .popup__label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 48px;
+  border: 2px solid rgba($color: #444444, $alpha: 0.1);
+  font-size: 17px;
+  line-height: 17px;
+  color: $text-color;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease-in;
+}
+
+.popup__radio-button + .popup__label:hover {
+  border-color: rgba($color: #444444, $alpha: 0.3);
+}
+
+.popup__radio-button:checked + .popup__label {
+  border-color: rgba($color: #62d1ba, $alpha: 1);
+}
+
+.popup__add-button {
+  border: none;
+  background-color: #62d1ba;
+  color: #ffffff;
+}
+
+.popup__add-button:hover {
+  background-color: rgba($color: #62d1ba, $alpha: 0.7);
+}
+
+.popup__add-button:active {
+  background-color: rgba($color: #62d1ba, $alpha: 0.5);
+}
+
+@media (min-width: $tablet-width) {
+  .popup__window {
+    width: 350px;
+    padding-top: 50px;
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+
+  .popup__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .popup__text {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .popup__radio-button + .popup__label {
+    width: 108px;
+  }
+}
